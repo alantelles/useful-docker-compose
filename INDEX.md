@@ -2,5 +2,5 @@
 
 ## P
 
-[postgres-pgadmin](https://raw.githubusercontent.com/alantelles/useful-docker-compose/main/P/postgres-pgadmin.yml)
+[postgres-pgadmin](https://raw.githubusercontent.com/alantelles/useful-docker-compose/main/docker-composes/P/postgres-pgadmin.yml)
 
