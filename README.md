@@ -4,7 +4,7 @@ A repository to host some docker-compose yaml configuration tha may be useful fo
 
 The files will be organized in folders with the initial of the referred system.
 
-An index in this README can take you directly to desired system.
+The INDEX file can take you directly to desired system.
 
 ## Contribution
 
@@ -12,7 +12,7 @@ Feel free to contribute to this repo! There are few rules to follow:
 
 1. Put the file in a folder of the initial of the system. If it not exists, feel free to create it yourself. Eg.: **rabbit-mq.yaml** at the **R** folder.
 
-2. Edit this README putting a link direct to the github provided raw version of the file.
+2. Edit the INDEX.md putting a link direct to the github provided raw version of the file in the letter of you system, if possible at alphabetic order.
 
 3. Explain clearly points in the file that must be replaced by environment variables or personal data such as volume paths or passwords. You can leave comments in the file if you want.
 
