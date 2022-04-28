@@ -9,7 +9,7 @@ services:
       - "5432:5432"
     volumes:
       # A folder where you want to map as postgres persistent data volume
-      - my-docker-volumes-folder:/var/lib/postgresql/data
+      - my-docker-volumes-folder/postgresql/data:/var/lib/postgresql/data
     networks:
       - postgres-compose-network
       
@@ -20,6 +20,8 @@ services:
       PGADMIN_DEFAULT_EMAIL: "alantelles@alan.telles"
       # Password for this account
       PGADMIN_DEFAULT_PASSWORD: "mydevpassword"
+    volumes:
+      - my-docker-volumes-folder/pgadmin:/var/lib/pgadmin
     ports:
       - "16543:80"
     depends_on:
