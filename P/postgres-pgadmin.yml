@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  postgres-compose:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "some-password-you-want"
+    ports:
+      - "5432:5432"
+    volumes:
+      # A folder where you want to map as postgres persistent data volume
+      - my-docker-volumes-folder:/var/lib/postgresql/data
+    networks:
+      - postgres-compose-network
+      
+  pgadmin-compose:
+    image: dpage/pgadmin4:6.8
+    environment:
+      # The email you'll use to login to PGAdmin, must not be a true address
+      PGADMIN_DEFAULT_EMAIL: "alantelles@alan.telles"
+      # Password for this account
+      PGADMIN_DEFAULT_PASSWORD: "mydevpassword"
+    ports:
+      - "16543:80"
+    depends_on:
+      - postgres-compose
+    networks:
+      - postgres-compose-network
+
+networks: 
+  postgres-compose-network:
+    driver: bridge
